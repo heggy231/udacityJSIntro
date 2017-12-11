@@ -478,7 +478,137 @@ var price = 15.00;
 var money = 20.00;
 
 if (money >= price) {
-    
+    console.log("Buy the hammer");
+} else {
+    console.log("Buy the hammer");
 }
 
 </script>
+
+If...else statements
+If...else statements allow you to execute certain pieces of code based on a condition, or set of conditions, being met.
+
+if (/* this expression is true */) {
+  // run this code
+} else {
+  // run this code
+}
+
+Note: can run only if statement alone.
+
+# Else if statement:
+Else if statements
+In JavaScript, you can represent this secondary check by using an extra if statement called an else if statement.
+
+var weather = "sunny";
+
+if (weather === "snow") {
+  console.log("Bring a coat.");
+} else if (weather === "rain") {
+  console.log("Bring a rain jacket.");
+} else {
+  console.log("Wear what you have on.");
+}
+
+Prints: Wear what you have on.
+- Note: By adding the extra else if statement, you're adding an extra conditional statement.
+
+If it’s not going to snow, then the code will jump to the else if statement to see if it’s going to rain. If it’s not going to rain, then the code will jump to the else statement.
+
+The else statement essentially acts as the "default" condition in case all the other if statements are false.
+
+/*
+ * Programming Quiz: Murder Mystery (3-4)
+ */
+Since this might be your first time playing a murder mystery, we've simplified things quite a bit to make it easier. Here's what we know! In this murder mystery there are:
+
+four rooms: the ballroom, gallery, billiards room, and dining room,
+four weapons: poison, a trophy, a pool stick, and a knife,
+and four suspects: Mr. Parkes, Ms. Van Cleve, Mrs. Sparr, and Mr. Kalehoff.
+We also know that each weapon corresponds to a particular room, so...
+
+the poison belongs to the ballroom,
+the trophy belongs to the gallery,
+the pool stick belongs to the billiards room,
+and the knife belongs to the dining room.
+
+Mr. Parkes was located in the dining room.
+Ms. Van Cleve was located in the gallery.
+Mrs. Sparr was located in the billiards room.
+Mr. Kalehoff was located in the ballroom.
+
+To help solve this mystery, write a combination of conditional statements that:
+
+- sets the value of weapon based on the room and
+- sets the value of solved to true if the value of room matches the suspect's room
+- If room equals gallery and suspect equals Ms. Van Cleve, then Ms. Van Cleve did it in the gallery with the trophy! should be printed to the console.
+
+
+* Requirement:
+- Your code should have a variable room
+- Your code should have a variable suspect
+- Your code should have a variable weapon
+- Your code should have a variable solved
+- Your code should include a conditional statement
+- The variable suspect should use one of the provided values
+- The variable weapon should be based on the room
+- Your code should produce the expected output
+<script>
+// change the value of `room` and `suspect` to test your code
+var room = "dining room";
+var suspect = "Mr. Parkes";
+
+var weapon = "";
+var solved = false;
+
+if (suspect === "Ms. Van Cleve" && room === "gallery") {
+    weapon = "trophy";
+    solved = true;
+} else if (suspect === "Mr. Kalehoff" && room === "ballroom") {
+    weapon = "poison";
+    solved = true;
+} else if (suspect === "Mrs. Sparr" && room === "billiards room") {
+    weapon = "pool stick";
+    solved = true;
+} else if (suspect === "Mr. Parkes" && room === "dining room") {
+    weapon = "knife"
+    solved = true;
+} else {
+    console.log("Try again!");
+}
+
+if (solved) {
+    console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
+}
+</script>
+
+## logical operators
+&& > AND 
+|| > OR
+! > opposite of
+
+<script>
+var colt = "not busy";
+var weather = "nice";
+
+if (colt === "not busy") {
+    if (weather === "nice") {
+        console.log("go to the park");
+    }
+}
+</script>
+
+// we can use logical operator &&
+<script>
+if (colt === "not busy" && weather === "nice") {
+    console.log("go to the park");
+}
+</script>
+
+true || false > true
+
+## short circuiting for logical evaluation
+- false && ___  > AND first value only matters, output: false
+- true || ____ > OR first value only matters, output: true
+
+![alt text](img/shortCircuiting.png "tableLogic")
