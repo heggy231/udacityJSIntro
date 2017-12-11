@@ -470,3 +470,15 @@ if (!checkBalance) {
 
 resources: http://www.jsrepl.com/@emg
 
+# Lesson 3: flowchar to code
+https://classroom.udacity.com/courses/ud803/lessons/3ace947b-b5f6-40c1-bc11-3ec98fd1d936/concepts/a9ef2a0f-b68f-4c96-8528-5556927aba63
+
+<script>
+var price = 15.00;
+var money = 20.00;
+
+if (money >= price) {
+    
+}
+
+</script>
