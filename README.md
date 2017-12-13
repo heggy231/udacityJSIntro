@@ -367,7 +367,7 @@ TIP: To print out the account balance with decimal points (i.e. 325.00), use the
 TIP: Make sure to test your code with different values. For example,
 
 If checkBalance equals true and isActive equals false, then Your account is no longer active. should be printed to the console.
-
+```javascript
 /*
  * Programming Quiz - Checking Your Balance (3-5)
  */
@@ -391,7 +391,7 @@ if (checkBalance === false) {
 		console.log("Your balance is negative. Please contact bank.");
 	}
 }
-
+```
 * Note: I missed else if instead wrote if else **
 
 another approach no else early on
@@ -472,8 +472,8 @@ resources: http://www.jsrepl.com/@emg
 
 # Lesson 3: flowchar to code
 https://classroom.udacity.com/courses/ud803/lessons/3ace947b-b5f6-40c1-bc11-3ec98fd1d936/concepts/a9ef2a0f-b68f-4c96-8528-5556927aba63
+```javascript
 
-<script>
 var price = 15.00;
 var money = 20.00;
 
@@ -483,8 +483,7 @@ if (money >= price) {
     console.log("Buy the hammer");
 }
 
-</script>
-
+```
 If...else statements
 If...else statements allow you to execute certain pieces of code based on a condition, or set of conditions, being met.
 
@@ -553,7 +552,8 @@ To help solve this mystery, write a combination of conditional statements that:
 - The variable suspect should use one of the provided values
 - The variable weapon should be based on the room
 - Your code should produce the expected output
-<script>
+
+```javascript
 // change the value of `room` and `suspect` to test your code
 var room = "dining room";
 var suspect = "Mr. Parkes";
@@ -580,15 +580,13 @@ if (suspect === "Ms. Van Cleve" && room === "gallery") {
 if (solved) {
     console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
 }
-</script>
-
+```
 ## logical operators
 && > AND 
 || > OR
 ! > opposite of
 
 ```javascript
-<script>
 var colt = "not busy";
 var weather = "nice";
 
@@ -597,14 +595,12 @@ if (colt === "not busy") {
         console.log("go to the park");
     }
 }
-</script>
+
 
 // we can use logical operator &&
-<script>
 if (colt === "not busy" && weather === "nice") {
     console.log("go to the park");
 }
-</script>
 ```
 
 true || false > true
@@ -615,7 +611,9 @@ true || false > true
 
 ![logical shortcircuit table](img/shortCircuiting.png "tableLogic")
 
-## lab balance
+## lab: balance that checkbook!
+
+```javascript
 /*
  * Programming Quiz - Checking Your Balance (3-5)
  */
@@ -641,3 +639,140 @@ if (checkBalance === false) {
 		console.log("Your balance is negative. Please contact bank.");
 	}
 }
+```
+
+## Lab: Lick that ice cream!
+```javascript
+/* Programming Quiz: Ice Cream (3-6)
+ *
+ * Write a single if statement that logs out the message:
+ *
+ * "I'd like two scoops of __________ ice cream in a __________ with __________."
+ *
+ * ...only if:
+ *   - flavor is "vanilla" or "chocolate"
+ *   - vessel is "cone" or "bowl"
+ *   - toppings is "sprinkles" or "peanuts"
+ *
+ * We're only testing the if statement and your boolean operators.
+ * It's okay if the output string doesn't match exactly.
+ */
+
+var flavor = "chocolate";
+var vessel = "bowl";
+var toppings = "sprinkles";
+
+// change the values of `flavor`, `vessel`, and `toppings` to test your code
+if(
+(flavor === "vanilla" || flavor === "chocolate")
+&&
+(vessel === "cone" || vessel === "bowl")
+&&
+(toppings === "sprinkles" || toppings === "peanuts")
+) 
+{
+  console.log("I'd like two scoops of " + flavor + " ice cream in a " + vessel + " with " + toppings + ".");
+}
+
+```
+## Lab: Tshirt https://classroom.udacity.com/courses/ud803/lessons/3ace947b-b5f6-40c1-bc11-3ec98fd1d936/concepts/1c7f869b-60fd-4746-a90e-5287f4a473dc
+
+```javascript
+/*
+ * Programming Quiz: What do I Wear? (3-7)
+ */
+//https://classroom.udacity.com/courses/ud803/lessons/3ace947b-b5f6-40c1-bc11-3ec98fd1d936/concepts/1c7f869b-60fd-4746-a90e-5287f4a473dc
+
+// change the values of `shirtWidth`, `shirtLength`, and `shirtSleeve` to test your code
+var shirtWidth = 18;
+var shirtLength = 29;
+var shirtSleeve = 8.47;
+
+/*
+If shirtWidth equals 19, shirtLength equals 28 and shirtSleeve equals 8.21, then S should be printed to the console.
+If shirtWidth equals 26, shirtLength equals 33 and shirtSleeve equals 9.63, then 2XL should be printed to the console.
+If shirtWidth equals 18, shirtLength equals 29 and shirtSleeve equals 8.47, then N/A should be printed to the console.
+*/
+
+// your code goes here
+
+if((shirtWidth >= 18 && shirtWidth < 20) &&
+   (shirtLength >= 28 && shirtLength < 29) &&
+   (shirtSleeve >= 8.13 && shirtSleeve < 8.38)) {
+        console.log("S");  
+} else if ((shirtWidth >= 20 && shirtWidth < 22) &&
+           (shirtLength >= 29 && shirtLength < 30) &&
+           (shirtSleeve >= 8.38 && shirtSleeve < 8.63)) {
+                console.log("M");
+} else if ((shirtWidth >= 22 && shirtWidth < 24) &&
+           (shirtLength >= 30 && shirtLength < 31) &&
+           (shirtSleeve >= 8.63 && shirtSleeve < 8.88)) {
+                console.log("L");      
+} else if ((shirtWidth >= 24 && shirtWidth < 26) && 
+           (shirtLength >= 31 && shirtLength < 33) &&
+           (shirtSleeve >= 8.88 && shirtSleeve < 9.63)) {
+                console.log("XL");
+} else if ((shirtWidth >= 26 && shirtWidth < 28) &&
+           (shirtLength >= 33 && shirtLength < 34) &&
+           (shirtSleeve >= 9.63 && shirtSleeve < 10.13)) {
+                console.log("2XL");
+} else if (shirtWidth >= 28 && shirtLength >= 34 && shirtSleeve >= 10.13) {
+                console.log("3XL");
+} else {
+                console.log("N/A");
+}
+```
+
+# Truthy and Falsy:
+```javascript
+if ("") {
+    console.log("truthy");
+} else {
+    console.log("falsy");
+}
+// or 
+!! "" // falsy
+!!NAN
+!!undefined
+!!0
+!!0.0
+!!false
+```
+
+- List of 6 falsy:
+1) boolean false
+2) "" empty string
+3) null
+4) 0 
+5) undefined type
+6) NaN
+
+```javascript
+!!1 // truthy
+true
+42
+"pizza"
+"0"
+"null"
+"undefined"
+{}
+[]
+```
+
+## Ternary Operator
+```javascript
+var isGoing = true;
+var color;
+
+if (isGoing) {
+    color = "green";
+} else {
+    color = "red";
+}
+
+console.log(color);
+```
+* TIP: Using if(isGoing) same as using if (isGoing === true)
+       Using if(!isGoing) same as using if (isGoing === false)
+
+Ternary operator
